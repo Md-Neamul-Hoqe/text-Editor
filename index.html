@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor | Design Text What You Want</title>
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/d7b7563d24.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-[#eff6ff] font-mono">
+    <main class="mx-auto my-10 px-32 py-5 min-h-max w-9/12 max-w-full border-0 rounded-lg bg-[#93c5fd]">
+        <h1 class="text-4xl font-black text-black mb-5 text-center">Simple Text Editor</h1>
+        <section class="border-2 p-5 border-black bg-[#bfdbfe]">
+            <div
+                class="bg-[#bfdbfe] max-w-full w-full min-w-0 grid grid-flow-row md:grid-cols-2 lg:grid-flow-col lg:grid-rows-1  pb-5 px-2 border-b-2 justify-between items-center border-black mb-5 text-lg font-medium font-sans">
+                <span class="flex gap-0 items-center py-2">
+                    <i id="textBold"
+                        class="active:bg-[#1f88ff] px-3 py-2 rounded-lg active:outline-2 active:shadow-md active:shadow-[#1f88ff] fa cursor-pointer fa-bold"></i>
+                    <i id="textItalic"
+                        class="active:bg-[#1f88ff] px-3 py-2 rounded-lg active:outline-2 active:shadow-md active:shadow-[#1f88ff] fa cursor-pointer fa-italic"></i>
+                    <i id="textUnderline"
+                        class="active:bg-[#1f88ff] px-3 py-2 rounded-lg active:outline-2 active:shadow-md active:shadow-[#1f88ff] fa cursor-pointer fa-underline"></i>
+                </span>
+                <span class="flex gap-0 items-center py-2">
+                    <i id="alignLeft"
+                        class="active:bg-[#1f88ff] px-3 py-2 rounded-lg active:outline-2 active:shadow-md active:shadow-[#1f88ff] fa cursor-pointer fa-align-left"></i>
+                    <i id="alignCenter"
+                        class="active:bg-[#1f88ff] px-3 py-2 rounded-lg active:outline-2 active:shadow-md active:shadow-[#1f88ff] fa cursor-pointer fa-align-center"></i>
+                    <i id="alignRight"
+                        class="active:bg-[#1f88ff] px-3 py-2 rounded-lg active:outline-2 active:shadow-md active:shadow-[#1f88ff] fa cursor-pointer fa-align-right"></i>
+                    <i id="alignJustify"
+                        class="active:bg-[#1f88ff] px-3 py-2 rounded-lg active:outline-2 active:shadow-md active:shadow-[#1f88ff] fa cursor-pointer fa-align-justify"></i>
+                </span>
+                <span class="flex gap-1 items-center py-0">
+                    <input class="max-w-[48px] bg-[#bfdbfe] rounded-md focus-within:bg-[#1f88ff]" value="16" min="9"
+                        max="100" type="number" name="font" id="fontSize">
+                    <button id="textCaseChange"
+                        class="focus-within:bg-[#1f88ff] px-3 py-1 rounded-lg focus:outline-2 focus:shadow-md focus:shadow-[#1f88ff] cursor-pointer"
+                        type="button">aA</button>
+                    <input
+                        class="border-0 focus-within:bg-[#1f88ff] focus:border-2 focus:shadow-md focus:shadow-[#1f88ff]"
+                        type="color" name="color" id="colorPicker">
+                </span>
+            </div>
+            <textarea class="max-w-full w-full min-w-0 font-serif p-3" autofocus name="textarea" id="textarea" cols="30"
+                rows="20">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat minima eligendi impedit modi praesentium quod tempora reiciendis quae rem saepe!</textarea>
+        </section>
+    </main>
+    <script src="./js/editor.js"></script>
+</body>
+
+</html>
